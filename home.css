@@ -9,8 +9,7 @@ body{
 }
 #logo{
     display: flex;
-    padding: 0px;
-    margin: 0px;
+    padding: 20px 0;
     justify-content: center;
     align-items: center;
 }
@@ -20,7 +19,7 @@ body{
 }
 
 #navbar ul {
-    border: 2px sOlid #D4AF37;
+    border: 2px sOlid #d4af37;
     list-style: none ;
     position: flex;
     width: 100%;
@@ -31,6 +30,7 @@ body{
     background-color:#333333;
     width: 20%;
     height: 40px;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 40px;
     text-align: center;
     color:white;
@@ -39,11 +39,7 @@ body{
     
 
 }
-#navbar ul li:hover
- {
-    background-color:  #D4AF37;
 
-}
 #navbar ul li a{
     color:white;
     text-decoration: none;
@@ -51,5 +47,6 @@ body{
 }
 #navbar ul li a:hover {
     color: black; 
+    background-color: #ffd752a7;
 }
 /*sani's code ends*/
