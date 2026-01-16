@@ -12,17 +12,14 @@
                 <img src="logo.png" alt="logo">
             </div>
            <div class="" id="navbar">
-           
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li>Menu</li>
-                    <li>ABOUT US</li>
-                    <li>CUSTOMER'S REVIEWS</li>
-                    <li><a href="view/login.php">LOG IN </a></li>
+                    <li><a href="About Us/aboutus.php">About Us</a></li>
+                    <li>Customer's Reviews</li>
+                    <li><a href="view/login.php">Log IN </a></li>
                 </ul>
            </div>
-
-
     </body>
 </html>
 <!--sani's code ends-->

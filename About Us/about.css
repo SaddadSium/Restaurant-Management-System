@@ -1,0 +1,173 @@
+/*--Developed by Sium*/
+body {
+    background: linear-gradient(to bottom, #1b1b1b, #2E2E2E); 
+}
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    color: #D4AF37; 
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.about-header p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.image-column {
+    flex: 1;
+    position: relative;
+}
+
+.image-column img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+.image-border {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #D4AF37;
+    z-index: 1;
+    transition: transform 0.5s ease;
+}
+
+.image-column:hover .image-border {
+    transform: translate(10px, -10px);
+}
+
+.text-column {
+    flex: 1;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.text-column h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+    border-left: 4px solid #D4AF37;
+    padding-left: 15px;
+}
+
+.text-column p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ccc;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.signature p {
+    font-family: 'Times New Roman', Times, serif;
+    color: #D4AF37;
+    font-style: italic;
+    font-size: 1.3rem;
+    text-align: right;
+    margin-top: 30px;
+}
+
+.features-row {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    padding: 40px 0;
+}
+
+.feature-box {
+    text-align: center;
+}
+
+.feature-box h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 5px;
+}
+
+.feature-box span {
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+}
+.contact-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+.contact-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    color: #D4AF37; 
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.c-item span {
+    color: #888;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.c-item a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.c-item a:hover {
+    color: #D4AF37;
+}
+
+.separator {
+    color: #444;
+    font-size: 1.5rem;
+}
+
+/*--Developed by Sium*/
