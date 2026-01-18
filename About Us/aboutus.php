@@ -19,7 +19,7 @@
                 <li><a href="#">Menu</a></li>
                 <li><a href="aboutus.php">About Us</a></li> 
                 <li><a href="#">Reviews</a></li>
-                <li><a href="view/login.php">Log In</a></li>
+                <li><a href="../Login/login.php">Log In</a></li>
             </ul>
         </div>
 
@@ -67,6 +67,21 @@
                 <div class="feature-box">
                     <h3>4.8</h3>
                     <span>Star Rating</span>
+                </div>
+            </section>
+            <section class="hours-section">
+                <div class="hours-content">
+                    <h2>Opening Hours</h2>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Saturday - Thursday :</span>
+                            <span class="time">11:00 AM - 11:00 PM</span>
+                        </li>
+                        <li>
+                            <span class="day">Friday :</span>
+                            <span class="time">03:00 PM - 12:00 PM</span>
+                        </li>
+                    </ul>
                 </div>
             </section>
 
