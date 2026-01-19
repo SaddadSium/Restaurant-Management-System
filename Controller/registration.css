@@ -1,0 +1,109 @@
+/*--Developed by Sium*/
+
+body {
+    background: linear-gradient(to bottom, #1b1b1b, #2E2E2E);
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+}
+
+.reg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 80vh;
+}
+
+.reg-box {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #444;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.reg-header h1 {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.reg-header p {
+    color: #888;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: #f1f1f1;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #D4AF37;
+}
+
+.reg-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.reg-btn:hover {
+    background-color: #D4AF37;
+    color: #1b1b1b;
+}
+
+.login-link {
+    margin-top: 25px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    color: #ccc;
+}
+
+.login-link a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
