@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <li><a href="../index.php">Home</a></li>
                 <li><a href="../Menu/menu.php">Menu</a></li>
                 <li><a href="../AboutUs/aboutus.php">About Us</a></li> 
-                <li><a href="#">Reviews</a></li>
+                <li><a href="../CustomerReview/review.php">Customer's Reviews</a></li>
                 <li><a href="login.php" class="active">Log In</a></li>
             </ul>
         </div>
