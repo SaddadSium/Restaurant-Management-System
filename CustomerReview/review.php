@@ -4,20 +4,20 @@
     <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Home | S&S Heritage</title>
-        <link rel="stylesheet" href="home.css">
+          <title>Customer's Review | S&S Heritage</title>
+        <link rel="stylesheet" href="review.css">
     </head>
     <body>
          <div id="logo">
-                <img src="logo.png" alt="logo">
+                <img src="../logo.png" alt="logo">
             </div>
            <div class="" id="navbar">
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="Menu/menu.php">Menu</a></li>
-                    <li><a href="AboutUs/aboutus.php">About Us</a></li>
-                    <li><a href ="Customer's Review/review.php">Customer's Reviews</a></li>
-                    <li><a href="Login/login.php">Log IN </a></li>
+                     <li><a href="../index.php">Home</a></li>
+                     <li><a href="../Menu/menu.php">Menu</a></li>
+                     <li><a href="../AboutUs/aboutus.php">About Us</a></li> 
+                     <li><a href="review.php">Customer's Reviews</a></li>
+                     <li><a href="../Login/login.php">Log In</a></li>
                 </ul>
            </div><br><br>
 
