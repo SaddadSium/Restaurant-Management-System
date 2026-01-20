@@ -1,7 +1,56 @@
-/*--Developed by Sium*/
-body {
-    background: linear-gradient(to bottom, #1b1b1b, #2E2E2E); 
+/*sani's code starts*/
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
+body{
+    background-color:#2E2E2E;
+}
+#logo{
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+#logo img{
+    height:100px;
+    width: 120px;
+}
+
+#navbar ul {
+    border: 2px sOlid goldenrod;
+    list-style: none ;
+    position: flex;
+    width: 100%;
+    
+
+}
+#navbar ul li {
+    background-color:#333333;
+    width: 20%;
+    height: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 40px;
+    text-align: center;
+    color:white;
+    float: left;
+    position:relative;
+    
+
+}
+
+#navbar ul li a{
+    color:white;
+    text-decoration: none;
+    display: block;
+}
+#navbar ul li a:hover {
+    color: black; 
+    background-color: goldenrod;
+}
+
+/*--Developed by Sium*/
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
