@@ -60,23 +60,48 @@ body{
     text-align: center;
     font-size: small;
 }
-#HomeIntro{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.HomeIntro {
+    display: flex;          
+    align-items: center;     
+    justify-content: center; 
+    gap: 50px;               
+    padding: 60px;      
+    max-width: 1400px;      
+    margin: auto;          
 }
-#HomeImg {
-    
-    display: flex;
-    margin: 50px;
-    padding: 20px;
-    border: 1px solid goldenrod;
-    width: 600px;
-    height: 400px;
-    align-content: center;
-    justify-content: center;
-    justify-content: flex-end;
 
+.block1 {
+    flex: 1;                
+}
+
+#text1 {
+    text-align: center;      
+    padding: 20px;
+}
+
+#text1 h2 {
+    font-size: 2.5rem;       
+    margin-bottom: 20px;
+    color: goldenrod;        
+}
+
+#text1 p {
+    font-size: 1.2rem;
+    line-height: 1.6;        
+    margin-bottom: 20px;
+    color:white;             
+}
+
+#text1 h3 {
+    font-style: italic;
+    color: white;
+}
+
+#HomeImg img {
+    width: 100%;            
+    height: auto;          
+    border-radius: 10px;     
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); 
 }
 
 

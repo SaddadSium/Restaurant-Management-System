@@ -20,18 +20,21 @@
                     <li><a href="Login/login.php">Log IN </a></li>
                 </ul>
            </div><br><br>
-           <div >
-
-           </div>
+           
            <div class= "HomeIntro">
-            <section id="HomeImg">
-               <img src="Homeimg-1.png" alt="interior img" >
-            </section>
+            
+           <section class="block1" id="text1">
+            <h2>Welcome to S&S Heritage Restaurant</h2>
+            <p>Experience the finest dining with an exquisite ambiance and exceptional service.</p>
+            <h3>-- Taste The Lagecy</h3>
+           </section>
 
-            <section>
+           <section class="block1" id="HomeImg">
+           <img src="Homeimg-1.png" alt="interior img" >
+           </section>
 
-            </section>
            </div> 
+
 
            <div id="footer">
            <footer><br>
