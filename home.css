@@ -19,7 +19,7 @@ body{
 }
 
 #navbar ul {
-    border: 2px sOlid #d4af37;
+    border: 2px sOlid goldenrod;
     list-style: none ;
     position: flex;
     width: 100%;
@@ -47,6 +47,37 @@ body{
 }
 #navbar ul li a:hover {
     color: black; 
-    background-color: #ffd752a7;
+    background-color: goldenrod;
 }
+#footer {
+
+    position :flex;
+    left: 0;
+    bottom : 0;
+    width: 100%;
+    background-color:black;
+    color:white;
+    text-align: center;
+    font-size: small;
+}
+#HomeIntro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#HomeImg {
+    
+    display: flex;
+    margin: 50px;
+    padding: 20px;
+    border: 1px solid goldenrod;
+    width: 600px;
+    height: 400px;
+    align-content: center;
+    justify-content: center;
+    justify-content: flex-end;
+
+}
+
+
 /*sani's code ends*/

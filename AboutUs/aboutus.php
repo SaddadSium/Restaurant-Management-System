@@ -100,7 +100,13 @@
                 </div>
             </section>
 
-        </div>
+        </div><!--Developed by Sium-->
+        <!--Developed by Sani-->
+          <div id="footer">
+           <footer><br>
+            <p>2026 S & S Heritage Restaurant.All rights reserved.</p> <br>
+            <p> S & S Heritage Restaurant<br> Purbachal-300fit, Dhaka-1216, Bangladesh<br>Opening Hours: 10am - 10pm</p><br><br>
+            </footer>
+            </div>
     </body>
 </html>
-<!--Developed by Sium-->
