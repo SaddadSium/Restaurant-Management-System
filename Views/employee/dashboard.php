@@ -1,39 +1,66 @@
-<!--Developed by Sium-->
 <?php
 session_start();
-if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'Employee') {
-    header("Location: ../../Login/login.php");
-    exit();
+include '../../Controller/db_connect.php';
+
+// স্ট্যাটাস আপডেট
+if (isset($_POST['update_status'])) {
+    $order_id = $_POST['order_id'];
+    $status = $_POST['status'];
+    $sql = "UPDATE orders SET order_status='$status' WHERE order_id='$order_id'";
+    mysqli_query($conn, $sql);
 }
+
+// অর্ডার লোড করা
+$sql = "SELECT * FROM orders ORDER BY order_date DESC";
+$result = mysqli_query($conn, $sql);
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Staff Dashboard | S&S Heritage</title>
-    <link rel="stylesheet" href="../../home.css">
-    <link rel="stylesheet" href="employee.css">
-</head>
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="../../Menu/menu.css"> <link rel="stylesheet" href="../dashboard.css">    </head>
 <body>
-    
-    <div class="top-nav">
-        <div class="logo">S&S Staff Panel</div>
-        <div class="user-info">
-            <span><?php echo $_SESSION['fullname']; ?> (Staff)</span>
+    <div class="dashboard-container">
+        <h1>Kitchen / Employee Dashboard</h1>
+        <div style="text-align: right; margin-bottom: 20px;">
             <a href="../../Login/logout.php" class="logout-btn">Logout</a>
         </div>
-    </div>
-
-    <div class="container">
-        <h1>Assigned Tasks</h1>
-        <div class="task-grid">
-            <div class="task-box">
-                <h2>Active Orders</h2>
-                <p>Manage incoming food orders.</p>
-                <a href="#" class="action-btn">View Orders</a>
-            </div>
-            </div>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Food Items</th>
+                    <th>Total Price</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                <tr>
+                    <td>#<?php echo $row['order_id']; ?></td>
+                    <td><?php echo $row['food_name']; ?></td>
+                    <td><?php echo $row['total_price']; ?> TK</td>
+                    <td style="font-weight: bold; color: <?php echo ($row['order_status']=='Pending')?'red':'green'; ?>;">
+                        <?php echo $row['order_status']; ?>
+                    </td>
+                    <td>
+                        <form method="post">
+                            <input type="hidden" name="order_id" value="<?php echo $row['order_id']; ?>">
+                            <select name="status" class="status-select">
+                                <option value="Pending" <?php if($row['order_status']=='Pending') echo 'selected'; ?>>Pending</option>
+                                <option value="Cooking" <?php if($row['order_status']=='Cooking') echo 'selected'; ?>>Cooking</option>
+                                <option value="Served" <?php if($row['order_status']=='Served') echo 'selected'; ?>>Served</option>
+                            </select>
+                            <button type="submit" name="update_status" class="action-btn">Update</button>
+                        </form>
+                    </td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
-<!--Developed by Sium-->

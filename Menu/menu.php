@@ -61,7 +61,7 @@ $result = mysqli_query($conn, $sql);
             <li><a href="#">Customer's Reviews</a></li>
             
             <?php if(isset($_SESSION['user_id'])): ?>
-                <li><a href="../Login/logout.php">Log Out</a></li>
+                <li><a href="../Login/logout.php" class="logout-btn">Log Out</a></li>
             <?php else: ?>
                 <li><a href="../Login/login.php">Log IN</a></li>
             <?php endif; ?>

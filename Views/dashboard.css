@@ -1,0 +1,147 @@
+/* dashboard.css - ড্যাশবোর্ড কমন স্টাইল */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* নেভিগেশন লিংক (অ্যাডমিনের জন্য) */
+.nav-links {
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+}
+
+.nav-links a {
+    color: #D4AF37;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    border-color: #D4AF37;
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+/* টেবিল ডিজাইন */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #555;
+    padding: 12px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #D4AF37;
+    color: black;
+    text-transform: uppercase;
+}
+
+/* বাটন এবং ইনপুট */
+.status-select {
+    padding: 6px;
+    background: #333;
+    color: white;
+    border: 1px solid #D4AF37;
+}
+
+.action-btn {
+    background: #D4AF37;
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.del-btn {
+    background: #ff4757;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+/* Accounts রিপোর্ট বক্স */
+.report-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.box {
+    background: #333;
+    padding: 25px;
+    border: 2px solid #D4AF37;
+    width: 220px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.box p {
+    font-size: 1.8rem;
+    color: #D4AF37;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* ============ DASHBOARD HEADER LAYOUT ============ */
+.dashboard-header {
+    display: flex;           /* পাশাপাশি আনার জন্য */
+    justify-content: space-between; /* দুই প্রান্তে ঠেলে দেওয়ার জন্য */
+    align-items: center;     /* লম্বালম্বি মাঝখানে থাকার জন্য */
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.welcome-text h2 {
+    color: #D4AF37;
+    margin: 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.welcome-text p {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* ============ STYLISH GOLD LOGOUT BUTTON ============ */
+.btn-logout-gold {
+    background-color: transparent;
+    border: 2px solid #D4AF37;   /* গোল্ডেন বর্ডার */
+    color: #D4AF37;              /* গোল্ডেন টেক্সট */
+    padding: 8px 25px;
+    border-radius: 50px;         /* পুরোপুরি গোল (Pill Shape) */
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;                    /* আইকন ও টেক্সটের গ্যাপ */
+}
+
+.btn-logout-gold:hover {
+    background-color: #D4AF37;   /* হোভার করলে গোল্ডেন ব্যাকগ্রাউন্ড */
+    color: #1b1b1b;              /* কালো টেক্সট */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); /* গ্লো ইফেক্ট */
+    transform: translateY(-2px);
+}
