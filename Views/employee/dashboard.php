@@ -1,6 +1,5 @@
+<!--Developed by Sium-->
 <?php
-// File Location: views/employee/dashboard.php
-
 session_start();
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'Employee') {
     header("Location: ../../Login/login.php");
@@ -37,3 +36,4 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'Employee') {
     </div>
 </body>
 </html>
+<!--Developed by Sium-->

@@ -1,5 +1,4 @@
 /*--Developed by Sium*/
-
 body {
     background: linear-gradient(to bottom, #1b1b1b, #2E2E2E);
     font-family: 'Times New Roman', Times, serif;
@@ -69,12 +68,9 @@ body {
     border-color: #D4AF37;
 }
 
-/* Removed .actions styles */
-
 .login-btn {
     width: 100%;
     padding: 12px;
-    /* Added margin-top to give space after password field */
     margin-top: 10px; 
     background-color: transparent;
     border: 2px solid #D4AF37;
@@ -110,3 +106,5 @@ body {
 .register-link a:hover {
     text-decoration: underline;
 }
+
+/*--Developed by Sium*/

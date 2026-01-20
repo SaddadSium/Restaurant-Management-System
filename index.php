@@ -14,7 +14,7 @@
            <div class="" id="navbar">
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li>Menu</li>
+                    <li><a href="Menu/menu.php">Menu</a></li>
                     <li><a href="AboutUs/aboutus.php">About Us</a></li>
                     <li>Customer's Reviews</li>
                     <li><a href="Login/login.php">Log IN </a></li>

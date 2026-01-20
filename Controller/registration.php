@@ -1,3 +1,4 @@
+<!--Developed by Sium-->
 <?php
 require_once 'db_connect.php';
 
@@ -65,9 +66,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="navbar">
             <ul>
                 <li><a href="../index.php">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="../About Us/aboutus.php">About Us</a></li> 
-                <li><a href="#">Reviews</a></li>
+                <li><a href="../Menu/menu.php">Menu</a></li>
+                <li><a href="../AboutUs/aboutus.php">About Us</a></li> 
+                <li><a href="#">Customer's Reviews</a></li>
                 <li><a href="../Login/login.php">Log In</a></li>
             </ul>
         </div>
@@ -121,3 +122,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </body>
 </html>
+<!--Developed by Sium-->

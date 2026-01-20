@@ -1,4 +1,4 @@
-/* S&S Heritage Admin Theme */
+/*--Developed by Sium*/
 body {
     background-color: #1b1b1b;
     font-family: 'Times New Roman', Times, serif;
@@ -7,7 +7,6 @@ body {
     color: #f1f1f1;
 }
 
-/* Sidebar Styling */
 .sidebar {
     width: 250px;
     background-color: #111;
@@ -53,7 +52,6 @@ body {
     color: #ff6b6b;
 }
 
-/* Main Content Styling */
 .main-content {
     margin-left: 250px;
     padding: 40px;
@@ -65,7 +63,6 @@ header h1 {
     margin-bottom: 5px;
 }
 
-/* Dashboard Cards */
 .dashboard-cards {
     display: flex;
     gap: 20px;
@@ -94,7 +91,6 @@ header h1 {
     font-weight: bold;
 }
 
-/* Table Styles */
 .recent-section {
     margin-top: 50px;
 }
@@ -136,3 +132,4 @@ table th {
     background: #D4AF37;
     color: #111;
 }
+/*--Developed by Sium*/

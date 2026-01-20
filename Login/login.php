@@ -1,3 +1,4 @@
+<!--Developed by Sium-->
 <?php
 session_start();
 require_once '../Controller/db_connect.php';
@@ -17,13 +18,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($result->num_rows === 1) {
             $user = $result->fetch_assoc();
 
-            // Password Verify
-            if (password_verify($input_password, $user['password'])) {
-                
+            if (password_verify($input_password, $user['password'])) {     
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['fullname'] = $user['fullname'];
                 $_SESSION['role'] = $user['role'];
 
+                if (isset($_SESSION['redirect_url'])) {
+                    $url = $_SESSION['redirect_url'];
+                    unset($_SESSION['redirect_url']); 
+                    header("Location: " . $url); 
+                    exit();
+                }
                 if ($user['role'] === 'Admin') {
                     header("Location: ../views/admin/dashboard.php");
                 } 
@@ -67,8 +72,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div id="navbar">
             <ul>
                 <li><a href="../index.php">Home</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="../About Us/aboutus.php">About Us</a></li> 
+                <li><a href="../Menu/menu.php">Menu</a></li>
+                <li><a href="../AboutUs/aboutus.php">About Us</a></li> 
                 <li><a href="#">Reviews</a></li>
                 <li><a href="login.php" class="active">Log In</a></li>
             </ul>
@@ -107,3 +112,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </body>
 </html>
+<!--Developed by Sium-->
