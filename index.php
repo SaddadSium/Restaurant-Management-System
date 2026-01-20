@@ -21,16 +21,31 @@
                 </ul>
            </div><br><br>
            
-           <div class= "HomeIntro">
-            
+           <div class= "HomeIntro1">
+
            <section class="block1" id="text1">
             <h2>Welcome to S&S Heritage Restaurant</h2>
             <p>Experience the finest dining with an exquisite ambiance and exceptional service.</p>
             <h3>-- Taste The Lagecy</h3>
            </section>
 
-           <section class="block1" id="HomeImg">
-           <img src="Homeimg-1.png" alt="interior img" >
+           <section class="block1" id="HomeImg1">
+           <img src="IndexImges/Homeimg-1.png" alt="interior img" >
+           </section>
+
+           </div> 
+
+            <div class= "HomeIntro2">
+
+           <section class="block2" id="HomeImg2">
+           <img src="IndexImges/Homeimg-2.png" alt="dine img" >
+           </section>
+
+           <section class="block2" id="text2">
+            <h2>An Exquisite Ambiance</h2>
+            <p>Whether it’s a romantic dinner or a family celebration, our heritage-inspired interior provides the perfect backdrop. 
+               Relax in a setting where elegance meets comfort</p>
+            <h3>--Dine in Timeless Elegance</h3>
            </section>
 
            </div> 

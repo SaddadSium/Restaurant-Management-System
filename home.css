@@ -60,7 +60,7 @@ body{
     text-align: center;
     font-size: small;
 }
-.HomeIntro {
+.HomeIntro1 {
     display: flex;          
     align-items: center;     
     justify-content: center; 
@@ -97,7 +97,50 @@ body{
     color: white;
 }
 
-#HomeImg img {
+#HomeImg1 img {
+    width: 100%;            
+    height: auto;          
+    border-radius: 10px;     
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); 
+}
+.HomeIntro2 {
+    display: flex;          
+    align-items: center;     
+    justify-content: center; 
+    gap: 50px;               
+    padding: 60px;      
+    max-width: 1400px;      
+    margin: auto;          
+}
+
+.block2 {
+    flex: 1;                
+}
+
+#text2 {
+    text-align: center;      
+    padding: 20px;
+}
+
+#text2 h2 {
+    font-size: 2.5rem;       
+    margin-bottom: 20px;
+    color: goldenrod;        
+}
+
+#text2 p {
+    font-size: 1.2rem;
+    line-height: 1.6;        
+    margin-bottom: 20px;
+    color:white;             
+}
+
+#text2 h3 {
+    font-style: italic;
+    color: white;
+}
+
+#HomeImg2 img {
     width: 100%;            
     height: auto;          
     border-radius: 10px;     
