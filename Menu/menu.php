@@ -58,7 +58,7 @@ $result = mysqli_query($conn, $sql);
             <li><a href="../index.php">Home</a></li>
             <li><a href="menu.php" class="active">Menu</a></li>
             <li><a href="../AboutUs/aboutus.php">About Us</a></li> 
-            <li><a href="#">Customer's Reviews</a></li>
+            <li><a href="../CustomerReview/review.php">Customer's Reviews</a></li>
             
             <?php if(isset($_SESSION['user_id'])): ?>
                 <li><a href="../Login/logout.php" class="logout-btn">Log Out</a></li>
