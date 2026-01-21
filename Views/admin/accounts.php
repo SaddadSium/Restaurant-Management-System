@@ -2,17 +2,17 @@
 session_start();
 include '../../Controller/db_connect.php';
 
-// ডেইলি ইনকাম
+// Daily Income
 $d_sql = "SELECT SUM(total_price) as total FROM orders WHERE DATE(order_date) = CURDATE()";
 $d_res = mysqli_fetch_assoc(mysqli_query($conn, $d_sql));
 $daily = $d_res['total'] ? $d_res['total'] : 0;
 
-// উইকলি ইনকাম
+// Weekly Income
 $w_sql = "SELECT SUM(total_price) as total FROM orders WHERE WEEK(order_date) = WEEK(CURDATE()) AND YEAR(order_date) = YEAR(CURDATE())";
 $w_res = mysqli_fetch_assoc(mysqli_query($conn, $w_sql));
 $weekly = $w_res['total'] ? $w_res['total'] : 0;
 
-// মান্থলি ইনকাম
+// Monthly Income
 $m_sql = "SELECT SUM(total_price) as total FROM orders WHERE MONTH(order_date) = MONTH(CURDATE()) AND YEAR(order_date) = YEAR(CURDATE())";
 $m_res = mysqli_fetch_assoc(mysqli_query($conn, $m_sql));
 $monthly = $m_res['total'] ? $m_res['total'] : 0;
@@ -33,7 +33,7 @@ $monthly = $m_res['total'] ? $m_res['total'] : 0;
             <a href="dashboard.php">Dashboard</a>
             <a href="order_manager.php">Orders</a>
             <a href="accounts.php" style="border-bottom: 2px solid #D4AF37;">Accounts</a>
-            <a href="../../Login/logout.php" class="logout-btn">Logout</a>
+            <a href="../../Views/logout.php" class="logout-btn">Logout</a>
         </div>
 
         <div class="report-box">

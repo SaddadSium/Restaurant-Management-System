@@ -1,18 +1,15 @@
 <?php
 session_start();
-// ডাটাবেস কানেকশন পাথ ঠিক আছে কিনা দেখে নেবেন
 include '../../Controller/db_connect.php';
 
-// ১. চেক করা হচ্ছে ইউজার লগইন আছে কিনা
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../../Login/login.php");
+    header("Location: ../../Views/login.php");
     exit();
 }
 
 $my_id = $_SESSION['user_id'];
 $my_name = $_SESSION['fullname'];
 
-// ২. শুধুমাত্র এই ইউজারের অর্ডারগুলো ডাটাবেস থেকে আনা হচ্ছে
 $sql = "SELECT * FROM orders WHERE user_id = '$my_id' ORDER BY order_date DESC";
 $result = mysqli_query($conn, $sql);
 ?>
@@ -27,11 +24,10 @@ $result = mysqli_query($conn, $sql);
     <link rel="stylesheet" href="../../home.css"> 
     <link rel="stylesheet" href="../dashboard.css">  
 
-     <style>
-        /* --- ড্যাশবোর্ড হেডার লেআউট (নাম বামে, বাটন ডানে) --- */
+    <style>
         .dashboard-header {
             display: flex;
-            justify-content: space-between; /* দুই প্রান্তে ঠেলে দেবে */
+            justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #444;
             padding-bottom: 20px;
@@ -89,36 +85,25 @@ $result = mysqli_query($conn, $sql);
 
                 <?php 
                     if (isset($_SESSION['user_id'])) {
-
                          echo '<li><a href="dashboard.php">Dashboard</a></li>';
                          echo' <li><a href="../../Views/logout.php"> Log Out </a></li>';
-
                         } 
-
                     else {
-
                          echo '<li><a href="../login.php">Log In</a></li>';
-                        
+                    
                         }
                 ?>
-
           </ul>
         </div>
         <!--updated by sani end  do not touch-->
-
     <div class="dashboard-container">
-        
         <div class="dashboard-header">
             <div class="welcome-text">
                 <h2>Welcome, <?php echo $my_name; ?>!</h2>
                 <p>Here is the history of your delicious orders.</p>
-            </div>
-            
-            
+            </div>            
         </div>
-
         <h3>My Order History</h3>
-
         <?php if (mysqli_num_rows($result) > 0) { ?>
             <table class="data-table">
                 <thead>
@@ -135,15 +120,12 @@ $result = mysqli_query($conn, $sql);
                     <tr>
                         <td>#<?php echo $row['order_id']; ?></td>
                         <td><?php echo date('d M Y, h:i A', strtotime($row['order_date'])); ?></td>
-                        
                         <td style="text-align: left; width: 40%;">
                             <?php echo $row['food_name']; ?>
                         </td>
-                        
                         <td style="font-weight: bold; color: #D4AF37;">
                             <?php echo $row['total_price']; ?> TK
-                        </td>
-                        
+                        </td>                       
                         <td>
                             <?php 
                                 if($row['order_status'] == 'Pending') {
@@ -165,8 +147,6 @@ $result = mysqli_query($conn, $sql);
                 <a href="../../Menu/menu.php" class="order-btn">Order Food Now</a>
             </div>
         <?php } ?>
-
     </div>
-
 </body>
 </html>

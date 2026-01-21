@@ -1,4 +1,3 @@
-/* dashboard.css - ড্যাশবোর্ড কমন স্টাইল */
 .dashboard-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -7,9 +6,6 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-
-
-/* টেবিল ডিজাইন */
 .data-table {
     width: 100%;
     border-collapse: collapse;
@@ -29,7 +25,6 @@
     text-transform: uppercase;
 }
 
-/* বাটন এবং ইনপুট */
 .status-select {
     padding: 6px;
     background: #333;
@@ -54,7 +49,6 @@
     border-radius: 3px;
 }
 
-/* Accounts রিপোর্ট বক্স */
 .report-box {
     display: flex;
     justify-content: center;
@@ -77,11 +71,11 @@
     font-weight: bold;
     margin-top: 10px;
 }
-/* ============ DASHBOARD HEADER LAYOUT ============ */
+
 .dashboard-header {
-    display: flex;           /* পাশাপাশি আনার জন্য */
-    justify-content: space-between; /* দুই প্রান্তে ঠেলে দেওয়ার জন্য */
-    align-items: center;     /* লম্বালম্বি মাঝখানে থাকার জন্য */
+    display: flex;          
+    justify-content: space-between; 
+    align-items: center;    
     border-bottom: 1px solid #444;
     padding-bottom: 15px;
     margin-bottom: 30px;

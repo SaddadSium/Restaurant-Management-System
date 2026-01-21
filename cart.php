@@ -67,15 +67,10 @@ if (isset($_GET['remove'])) {
 
                  echo '<li><a href="Views/customer/dashboard.php">Dashboard</a></li>';
                  echo '<li><a href="Views/logout.php">Log Out</a></li>';
-
                     } 
-
                  else {
-
-                 echo '<li><a href="Views/login.php">Log In</a></li>';
-                        
+                 echo '<li><a href="Views/login.php">Log In</a></li>';       
                     }
-
              ?>
          </ul>
     </div>

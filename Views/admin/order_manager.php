@@ -2,7 +2,7 @@
 session_start();
 include '../../Controller/db_connect.php';
 
-// অর্ডার ডিলিট
+// Delete Order
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     mysqli_query($conn, "DELETE FROM orders WHERE order_id=$id");
@@ -28,9 +28,8 @@ $result = mysqli_query($conn, $sql);
             <a href="dashboard.php">Dashboard</a>
             <a href="order_manager.php" style="border-bottom: 2px solid #D4AF37;">Orders</a>
             <a href="accounts.php">Accounts</a>
-            <a href="../../Login/logout.php" class="logout-btn">Logout</a>
+            <a href="../../Views/logout.php" class="logout-btn">Logout</a>
         </div>
-
         <table class="data-table">
             <thead>
                 <tr>
