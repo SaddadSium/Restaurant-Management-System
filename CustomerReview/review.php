@@ -44,45 +44,56 @@ $result = mysqli_query($conn, "SELECT * FROM reviews ORDER BY created_at DESC");
         <link rel="stylesheet" href="review.css">
     </head>
     <body>
-         <div id="logo">
+        <div id="logo">
                 <img src="../logo.png" alt="logo">
-            </div>
+        </div>
            <div class="" id="navbar">
-                <ul>
-                     <li><a href="../index.php">Home</a></li>
-                     <li><a href="../Menu/menu.php">Menu</a></li>
-                     <li><a href="../AboutUs/aboutus.php">About Us</a></li> 
-                     <li><a href="review.php">Customer's Reviews</a></li>
-                     <li><a href="../Views/login.php">Log In</a></li>
-                </ul>
-           </div><br><br>
+            <ul>
+                <?php 
+                         if (isset($_SESSION['user_id'])) {
 
-          <div id="review-box"> <h2>Customer Reviews</h2>
+                             echo '<li><a href="Views/customer/dashboard.php">Dashboard</a></li>';
+                             echo '<li><a href="Views/logout.php">Log Out</a></li>';
+                           } 
+
+                         else {
+
+                             echo '<li><a href="Views/login.php">Log In</a></li>';
+                           }
+                ?>
+
+            
+            </ul>
+           <div>
+            <br><br>
+
+        <div id="review-box"> <h2>Customer Reviews</h2>
         
-        <div class="scroll-list">
-            <?php while($row = mysqli_fetch_assoc($result)): ?>
+            <div class="scroll-list">
+                  <?php while($row = mysqli_fetch_assoc($result)): ?>
                 <div class="review-item">
                     <span class="user"><?php echo $row['username']; ?></span>
                     <span class="date"><?php echo $row['created_at']; ?></span>
                     <p><?php echo htmlspecialchars($row['comment']); ?></p>
                 </div>
-            <?php endwhile; ?>
+                    <?php endwhile; ?>
+            </div>
+
+             <form method="POST">
+                 <textarea name="comment" placeholder="Share your experience..." required></textarea>
+                 <button type="submit" name="submit_review" class="btn">Post Review</button>
+             </form>
+        
+           
         </div>
 
-        <form method="POST">
-            <textarea name="comment" placeholder="Share your experience..." required></textarea>
-            <button type="submit" name="submit_review" class="btn">Post Review</button>
-        </form>
-        
-        <br><a href="../index.php" style="color: white;">Back to Home</a>
-    </div>
-
-       <div id="footer">
-           <footer><br>
+        <div id="footer">
+            <footer><br>
             <p>2026 S & S Heritage Restaurant.All rights reserved.</p> <br>
             <p> S & S Heritage Restaurant<br> Purbachal-300fit, Dhaka-1216, Bangladesh<br>Opening Hours: 10am - 10pm</p><br><br>
             </footer>
-            </div>
-        </body>
+        </div>
+    </body>
+     
 </html>
 <!--sani's code ends-->
