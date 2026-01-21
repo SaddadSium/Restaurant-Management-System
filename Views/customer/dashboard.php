@@ -104,14 +104,15 @@ $result = mysqli_query($conn, $sql);
         </div>
 
     <div id="navbar">
-            <ul>
-                <li><a href="../../index.php" class="active" >Home</a></li>
-                <li><a href="../../Menu/menu.php" class="active" >Menu</a></li>
-                <li><a href="../../AboutUs/aboutus.php" class="active" >About Us</a></li> 
-                <li><a href="../../CustomerReview/review.php" class="active" >Customer's Reviews</a></li> <!--upadeted  by sani-->
-                <li><a href="dashboard.php" class="active">DashBord</a></li>
-                <li><a href="login.php" class="active">Log out</a></li>
-            </ul>
+           <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="Menu/menu.php">Menu</a></li>
+                <li><a href="AboutUs/aboutus.php">About Us</a></li>
+                <li><a href="CustomerReview/review.php">Customer's Reviews</a></li>
+
+                
+
+          </ul>
         </div>
 
     <div class="dashboard-container">
