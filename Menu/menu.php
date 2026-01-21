@@ -38,7 +38,7 @@ if (isset($_POST['add_to_cart'])) {
 $sql = "SELECT * FROM menu_items WHERE category = '$category'";
 $result = mysqli_query($conn, $sql);
 ?>
-
+<!--upadeted start by sani-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,15 +59,26 @@ $result = mysqli_query($conn, $sql);
             <li><a href="../index.php">Home</a></li>
             <li><a href="menu.php" class="active">Menu</a></li>
             <li><a href="../AboutUs/aboutus.php">About Us</a></li> 
-            <li><a href="../CustomerReview/review.php">Customer's Reviews</a></li> <!--upadeted  by sani-->
+            <li><a href="../CustomerReview/review.php">Customer's Reviews</a></li> 
            
-            <?php if(isset($_SESSION['user_id'])): ?>
-                <li><a href="../Views/logout.php" class="logout-btn">Log Out</a></li> <!--updated by sani-->
-            <?php else: ?>
-                <li><a href="../Views/login.php">Log IN</a></li>  <!--updated by sani-->
-            <?php endif; ?>
+             <?php 
+                         if (isset($_SESSION['user_id'])) {
+
+                             echo '<li><a href="Views/customer/dashboard.php">Dashboard</a></li>';
+                             echo '<li><a href="Views/logout.php">Log Out</a></li>';
+                           } 
+
+                         else {
+
+                             echo '<li><a href="Views/login.php">Log In</a></li>';
+                           }
+                     ?>
+
+            
         </ul>
     </div><br><br>
+<!--upadeted end  by sani-->
+
 
     <div class="cart-notification">
         <a href="../cart.php"> <!--updated by sani-->
