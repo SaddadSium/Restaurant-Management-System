@@ -75,6 +75,7 @@ $result = mysqli_query($conn, $sql);
     </style>
 </head>
 <body>
+<!--updated by sani start do not touch-->
         <div id="logo">
              <img src="../../logo.png" alt="S&S Heritage Logo">
         </div>
@@ -90,7 +91,7 @@ $result = mysqli_query($conn, $sql);
                     if (isset($_SESSION['user_id'])) {
 
                          echo '<li><a href="dashboard.php">Dashboard</a></li>';
-                         echo' <li><a href="../../Views/logout.php"> Logout ➜</a></li>';
+                         echo' <li><a href="../../Views/logout.php"> Log Out </a></li>';
 
                         } 
 
@@ -103,6 +104,7 @@ $result = mysqli_query($conn, $sql);
 
           </ul>
         </div>
+        <!--updated by sani end  do not touch-->
 
     <div class="dashboard-container">
         
