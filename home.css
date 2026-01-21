@@ -28,7 +28,7 @@ body{
 }
 #navbar ul li {
     background-color:#333333;
-    width: 20%;
+    width: auto;
     height: 40px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 40px;

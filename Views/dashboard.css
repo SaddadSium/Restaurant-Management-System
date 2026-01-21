@@ -7,28 +7,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* নেভিগেশন লিংক (অ্যাডমিনের জন্য) */
-.nav-links {
-    margin-bottom: 30px;
-    text-align: center;
-    border-bottom: 1px solid #444;
-    padding-bottom: 20px;
-}
 
-.nav-links a {
-    color: #D4AF37;
-    margin: 0 15px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    padding: 8px 15px;
-    border: 1px solid transparent;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    border-color: #D4AF37;
-    background-color: rgba(212, 175, 55, 0.1);
-}
 
 /* টেবিল ডিজাইন */
 .data-table {
@@ -122,26 +101,4 @@
     margin-top: 5px;
 }
 
-/* ============ STYLISH GOLD LOGOUT BUTTON ============ */
-.btn-logout-gold {
-    background-color: transparent;
-    border: 2px solid #D4AF37;   /* গোল্ডেন বর্ডার */
-    color: #D4AF37;              /* গোল্ডেন টেক্সট */
-    padding: 8px 25px;
-    border-radius: 50px;         /* পুরোপুরি গোল (Pill Shape) */
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;                    /* আইকন ও টেক্সটের গ্যাপ */
-}
 
-.btn-logout-gold:hover {
-    background-color: #D4AF37;   /* হোভার করলে গোল্ডেন ব্যাকগ্রাউন্ড */
-    color: #1b1b1b;              /* কালো টেক্সট */
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); /* গ্লো ইফেক্ট */
-    transform: translateY(-2px);
-}
