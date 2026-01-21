@@ -47,7 +47,7 @@ $total_customers = $user_res['count'];
                 <li><a href="salesreport.php">Sale's Report</a></li>
                 <li><a href="manage_menu.php">Update Menu</a></li>
                 <li><a href="adduser.php">Add User</a></li>
-                <li><a href="../login.php">Logout</a></li>
+                <li><a href="../logout.php">Logout</a></li>
                 
             </ul>
 
