@@ -17,7 +17,7 @@
                     <li><a href="Menu/menu.php">Menu</a></li>
                     <li><a href="AboutUs/aboutus.php">About Us</a></li>
                     <li><a href ="CustomerReview/review.php">Customer's Reviews</a></li>
-                    <li><a href="Login/login.php">Log IN </a></li>
+                    <li><a href="Views/login.php">Log IN </a></li>
                 </ul>
            </div><br><br>
            

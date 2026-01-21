@@ -19,7 +19,7 @@
                 <li><a href="../Menu/menu.php">Menu</a></li>
                 <li><a href="aboutus.php">About Us</a></li> 
                 <li><a href="../CustomerReview/review.php">Customer's Reviews</a></li> <!--upadeted  by sani-->
-                <li><a href="../Login/login.php">Log In</a></li>
+                <li><a href="../Views/login.php">Log In</a></li>
             </ul>
         </div>
 

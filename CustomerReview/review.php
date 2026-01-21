@@ -53,7 +53,7 @@ $result = mysqli_query($conn, "SELECT * FROM reviews ORDER BY created_at DESC");
                      <li><a href="../Menu/menu.php">Menu</a></li>
                      <li><a href="../AboutUs/aboutus.php">About Us</a></li> 
                      <li><a href="review.php">Customer's Reviews</a></li>
-                     <li><a href="../Login/login.php">Log In</a></li>
+                     <li><a href="../Views/login.php">Log In</a></li>
                 </ul>
            </div><br><br>
 

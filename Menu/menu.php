@@ -60,14 +60,14 @@ $result = mysqli_query($conn, $sql);
             <li><a href="menu.php" class="active">Menu</a></li>
             <li><a href="../AboutUs/aboutus.php">About Us</a></li> 
             <li><a href="../CustomerReview/review.php">Customer's Reviews</a></li> <!--upadeted  by sani-->
-            
+           
             <?php if(isset($_SESSION['user_id'])): ?>
-                <li><a href="../Login/logout.php" class="logout-btn">Log Out</a></li>
+                <li><a href="../Views/logout.php" class="logout-btn">Log Out</a></li> <!--updated by sani-->
             <?php else: ?>
-                <li><a href="../Login/login.php">Log IN</a></li>
+                <li><a href="../Views/login.php">Log IN</a></li>  <!--updated by sani-->
             <?php endif; ?>
         </ul>
-    </div>
+    </div><br><br>
 
     <div class="cart-notification">
         <a href="../cart.php"> <!--updated by sani-->

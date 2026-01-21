@@ -1,9 +1,5 @@
 /*--Developed by Sium*/
-body {
-    background-color: #333333;
-    font-family: 'Times New Roman', Times, serif;
-    min-height: 100vh;
-}
+
 
 .login-container {
     display: flex;
