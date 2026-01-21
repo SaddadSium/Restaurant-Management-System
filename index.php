@@ -1,4 +1,9 @@
 <!--sani's code starts-->
+<?php 
+      session_start(); 
+
+      ?>
+      
 <!doctype html>
 <html>
     <head>
