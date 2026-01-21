@@ -49,18 +49,25 @@ $result = mysqli_query($conn, "SELECT * FROM reviews ORDER BY created_at DESC");
         </div>
            <div class="" id="navbar">
             <ul>
-                <?php 
-                         if (isset($_SESSION['user_id'])) {
 
-                             echo '<li><a href="Views/customer/dashboard.php">Dashboard</a></li>';
-                             echo '<li><a href="Views/logout.php">Log Out</a></li>';
-                           } 
+                 <li><a href="../index.php">Home</a></li>
+                 <li><a href="../Menu/menu.php">Menu</a></li>
+                 <li><a href="../AboutUs/aboutus.php">About Us</a></li>
+                 <li><a href="review.php">Customer's Reviews</a></li>
+                 <?php 
+                    if (isset($_SESSION['user_id'])) {
 
-                         else {
+                         echo '<li><a href="../Views/customer/dashboard.php">Dashboard</a></li>';
+                         echo '<li><a href="../Views/logout.php">Log Out</a></li>';
 
-                             echo '<li><a href="Views/login.php">Log In</a></li>';
-                           }
-                ?>
+                        } 
+
+                    else {
+
+                         echo '<li><a href="../Views/login.php">Log In</a></li>';
+                        
+                        }
+                 ?>
 
             
             </ul>

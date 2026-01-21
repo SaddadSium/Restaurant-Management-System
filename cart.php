@@ -57,10 +57,27 @@ if (isset($_GET['remove'])) {
     
     <div id="navbar">
         <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="Menu/menu.php">Menu</a></li>
-            <li><a href="Login/logout.php" class="logout-btn">Log Out</a></li>
-        </ul>
+             <li><a href="index.php">Home</a></li>
+             <li><a href="Menu/menu.php">Menu</a></li>
+             <li><a href="AboutUs/aboutus.php">About Us</a></li>
+             <li><a href="CustomerReview/review.php">Customer's Reviews</a></li>
+
+             <?php 
+                 if (isset($_SESSION['user_id'])) {
+
+                 echo '<li><a href="Views/customer/dashboard.php">Dashboard</a></li>';
+                 echo '<li><a href="Views/logout.php">Log Out</a></li>';
+
+                    } 
+
+                 else {
+
+                 echo '<li><a href="Views/login.php">Log In</a></li>';
+                        
+                    }
+
+             ?>
+         </ul>
     </div>
 
     <div class="cart-container">
