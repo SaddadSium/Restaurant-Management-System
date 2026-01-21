@@ -102,30 +102,30 @@ $result = mysqli_query($conn, $sql);
         <div id="logo">
              <img src="../../logo.png" alt="S&S Heritage Logo">
         </div>
-<!--upadeted end  by sani-->
 
     <div id="navbar">
-         
-       <ul>
-             <?php 
-                if (isset($_SESSION['user_id'])) {
+           <ul>
+                <li><a href="../../index.php">Home</a></li>
+                <li><a href="../../Menu/menu.php">Menu</a></li>
+                <li><a href="../../AboutUs/aboutus.php">About Us</a></li>
+                <li><a href="../../CustomerReview/review.php">Customer's Reviews</a></li>
 
-                     echo '<li><a href="Views/customer/dashboard.php">Dashboard</a></li>';
-                     echo '<li><a href="Views/logout.php">Log Out</a></li>';
-                
-                 } 
+                <?php 
+                    if (isset($_SESSION['user_id'])) {
 
-                else {
+                         echo '<li><a href="Views/customer/dashboard.php">Dashboard</a></li>';
+                         echo '<li><a href="Views/logout.php">Log Out</a></li>';
 
-                     echo '<li><a href="Views/login.php">Log In</a></li>';
-                           
-                 }
-             ?>
+                        } 
 
-            
-        </ul>
-    </div><br><br>
-<!--upadeted end  by sani-->
+                    else {
+
+                         echo '<li><a href="Views/login.php">Log In</a></li>';
+                        
+                        }
+                ?>
+
+          </ul>
         </div>
 
     <div class="dashboard-container">
