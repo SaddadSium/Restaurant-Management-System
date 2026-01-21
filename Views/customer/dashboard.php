@@ -24,7 +24,10 @@ $result = mysqli_query($conn, $sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Dashboard | S&S Heritage</title>
     
-    <link rel="stylesheet" href="../../Menu/menu.css"> <link rel="stylesheet" href="../dashboard.css">    <style>
+    <link rel="stylesheet" href="../../home.css"> 
+    <link rel="stylesheet" href="../dashboard.css">  
+
+     <style>
         /* --- ড্যাশবোর্ড হেডার লেআউট (নাম বামে, বাটন ডানে) --- */
         .dashboard-header {
             display: flex;
@@ -96,15 +99,20 @@ $result = mysqli_query($conn, $sql);
     </style>
 </head>
 <body>
+        <div id="logo">
+             <img src="../../logo.png" alt="S&S Heritage Logo">
+        </div>
 
     <div id="navbar">
-        <ul>
-            <li><a href="../../index.php">Home</a></li>
-            <li><a href="../../Menu/menu.php">Menu</a></li>
-            <li><a href="../../AboutUs/aboutus.php">About Us</a></li>
-            <li><a href="../../Login/logout.php">Logout</a></li>
-        </ul>
-    </div>
+            <ul>
+                <li><a href="../../index.php" class="active" >Home</a></li>
+                <li><a href="../../Menu/menu.php" class="active" >Menu</a></li>
+                <li><a href="../../AboutUs/aboutus.php" class="active" >About Us</a></li> 
+                <li><a href="../../CustomerReview/review.php" class="active" >Customer's Reviews</a></li> <!--upadeted  by sani-->
+                <li><a href="dashboard.php" class="active">DashBord</a></li>
+                <li><a href="login.php" class="active">Log out</a></li>
+            </ul>
+        </div>
 
     <div class="dashboard-container">
         
