@@ -1,46 +1,38 @@
 <!--sani's code starts-->
 <?php 
-      session_start(); 
-
-      ?>
-      
+session_start(); 
+?>     
 <!doctype html>
 <html>
     <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Home | S&S Heritage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | S&S Heritage</title>
         <link rel="stylesheet" href="home.css">
     </head>
     <body>
-         <div id="logo">
-                <img src="logo.png" alt="logo">
-            </div>
-           <div class="" id="navbar">
-                <ul>
-                     <li><a href="index.php">Home</a></li>
-                     <li><a href="Menu/menu.php">Menu</a></li>
-                     <li><a href="AboutUs/aboutus.php">About Us</a></li>
-                     <li><a href="CustomerReview/review.php">Customer's Reviews</a></li>
+        <div id="logo">
+        <img src="logo.png" alt="logo">
+        </div>
+        <div class="" id="navbar">
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="Menu/menu.php">Menu</a></li>
+                <li><a href="AboutUs/aboutus.php">About Us</a></li>
+                <li><a href="CustomerReview/review.php">Customer's Reviews</a></li>
 
-                     <?php 
-                         if (isset($_SESSION['user_id'])) {
-
-                             echo '<li><a href="Views/customer/dashboard.php">Dashboard</a></li>';
-                             echo '<li><a href="Views/logout.php">Log Out</a></li>';
-                           } 
-
-                         else {
-
-                             echo '<li><a href="Views/login.php">Log In</a></li>';
-                           }
-                     ?>
-
-                     </ul>
+                <?php 
+                if (isset($_SESSION['user_id'])) {
+                    echo '<li><a href="Views/customer/dashboard.php">Dashboard</a></li>';
+                    echo '<li><a href="Views/logout.php">Log Out</a></li>';
+                    } 
+                    else {
+                    echo '<li><a href="Views/login.php">Log In</a></li>';
+                    }
+                ?>
+            </ul>
            </div><br><br>
-           
            <div class= "HomeIntro1">
-
            <section class="block" id="text">
             <h2>A Warm Heritage Welcome</h2>
             <p>Step into a world where tradition meets luxury. At S&S Heritage, we believe every meal is a celebration. 

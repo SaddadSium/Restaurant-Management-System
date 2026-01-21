@@ -38,7 +38,7 @@ try {
     $users_data = [
         ['Admin User', 'admin', 'admin@gmail.com', '1234', 'Admin'],
         ['Staff Member', 'staff', 'staff@gmail.com', '1234', 'Employee'],
-        ['John Doe', 'customer', 'customer@gmail.com', '1234', 'Customer']
+        ['Sium', 'customer', 'customer@gmail.com', '1234', 'Customer']
     ];
 
     foreach ($users_data as $u) {
@@ -62,14 +62,28 @@ try {
     $stmt_menu = $conn->prepare("INSERT INTO menu_items (name, description, price, image, category) VALUES (?, ?, ?, ?, ?)");
 
     $menu_data = [
-        ['Kacchi Biryani', 'Traditional Basmati Kacchi with tender mutton pieces.', 450.00, 'kacchi.jpg', 'Meal'],
-        ['Chicken Roast', 'Traditional Bangladeshi wedding-style chicken roast.', 150.00, 'roast.jpg', 'Meal'],
-        ['BBQ Chicken Pizza', '8-inch pizza topped with BBQ chicken, onion, and cheese.', 450.00, 'pizza.jpg', 'Fastfood'],
-        ['Chicken Corn Soup', 'Comforting soup with sweet corn and egg drops.', 150.00, 'corn_soup.jpg', 'Fastfood'],
-        ['Special Borhani', 'Spicy yogurt drink with mint and green chili.', 80.00, 'borhani.jpg', 'Drinks'],
-        ['Cold Coffee', 'Chilled coffee blended with milk, sugar, and ice cream.', 160.00, 'cold_coffee.jpg', 'Drinks'],
-        ['Caramel Pudding', 'Smooth and creamy custard dessert with caramel topping.', 100.00, 'pudding.jpg', 'Dessert'],
-        ['Special Falooda', 'Rich dessert with noodles, jelly, fruits, nuts, and ice cream.', 180.00, 'falooda.jpg', 'Dessert']
+    ['Kacchi Biryani', 'Traditional Basmati Kacchi with tender mutton pieces.', 450.00, 'kacchi.jpg', 'Meal'],
+    ['Chicken Roast', 'Traditional Bangladeshi wedding-style chicken roast.', 150.00, 'roast.jpg', 'Meal'],
+    ['BBQ Chicken Pizza', '8-inch pizza topped with BBQ chicken, onion, and cheese.', 450.00, 'pizza.jpg', 'Fastfood'],
+    ['Chicken Corn Soup', 'Comforting soup with sweet corn and egg drops.', 150.00, 'corn_soup.jpg', 'Fastfood'],
+    ['Special Borhani', 'Spicy yogurt drink with mint and green chili.', 80.00, 'borhani.jpg', 'Drinks'],
+    ['Royal Badam Lacchi', 'Sweet and creamy yogurt drink blended with crushed nuts.', 120.00, 'lacchi.jpg', 'Drinks'],
+    ['Soft Drinks (Can)', 'Chilled can of Coke, Sprite, or Fanta.', 60.00, 'soft_drinks.jpg', 'Drinks'],
+    ['Mineral Water (500ml)', 'Fresh mineral water bottle.', 30.00, 'water.jpg', 'Drinks'],
+    ['Fresh Mango Juice', 'Refreshing juice made from hand-picked ripe mangoes.', 150.00, 'mango_juice.jpg', 'Drinks'],
+    ['Beef Bhuna', 'Spicy and delicious beef curry.', 220.00, 'beef_bhuna.jpg', 'Meal'],
+    ['Morog Polao', 'Flavorful chicken pilaf cooked with spices.', 350.00, 'morog_polao.jpg', 'Meal'],
+    ['Khichuri', 'Traditional rice and lentil dish with beef.', 200.00, 'khichuri.jpg', 'Meal'],
+    ['Mutton Rezala', 'Rich and creamy mutton curry.', 280.00, 'mutton_rezala.jpg', 'Meal'],
+    ['Thai Soup', 'Spicy and tangy thick soup.', 180.00, 'thai_soup.jpg', 'Fastfood'],
+    ['Burger', 'Juicy chicken burger with cheese.', 180.00, 'burger.jpg', 'Fastfood'],
+    ['Chowmein', 'Stir-fried noodles with chicken and vegetables.', 160.00, 'chowmein.jpg', 'Fastfood'],
+    ['Fried Chicken', 'Crispy fried chicken pieces.', 120.00, 'fried_chicken.jpg', 'Fastfood'],
+    ['Cold Coffee', 'Chilled coffee blended with milk, sugar, and ice cream.', 160.00, 'cold_coffee.jpg', 'Drinks'],
+    ['Caramel Pudding', 'Smooth and creamy custard dessert with caramel topping.', 100.00, 'pudding.jpg', 'Dessert'],
+    ['Special Falooda', 'Rich dessert with noodles, jelly, fruits, nuts, and ice cream.', 180.00, 'falooda.jpg', 'Dessert'],
+    ['Rasmalai', 'Soft cheese balls soaked in malai.', 200.00, 'rasmalai.jpg', 'Dessert'],
+    ['Brownie', 'Chocolate brownie with nuts.', 120.00, 'brownie.jpg', 'Dessert']
     ];
 
     foreach ($menu_data as $m) {

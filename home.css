@@ -28,7 +28,7 @@ body{
 }
 #navbar ul li {
     background-color:#333333;
-    width: auto;
+    width: 20%;
     height: 40px;
     font-family: 'Times New Roman', Times, serif;
     line-height: 40px;
@@ -36,8 +36,6 @@ body{
     color:white;
     float: left;
     position:relative;
-    
-
 }
 
 #navbar ul li a{
@@ -49,6 +47,7 @@ body{
     color: black; 
     background-color: goldenrod;
 }
+
 #footer {
 
     position :flex;
@@ -132,9 +131,4 @@ body{
     margin: auto;    
     
 }
-
-
-
-
-
 /*sani's code ends*/

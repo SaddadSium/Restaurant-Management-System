@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($stmt->execute()) {
                 echo "<script>
                         alert('Registration Successful! Please Login.');
-                        window.location.href='../Login/login.php';
+                        window.location.href='../Views/login.php';
                       </script>";
                 exit();
             } else {
@@ -94,7 +94,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h1>Join Us</h1>
                     <p>Create your account at S&S Heritage</p>
 
-                    <?php if(!empty($error_msg)) { ?>
+                    <?php 
+                    if(!empty($error_msg)) 
+                    { ?>
                         <p style="color: red; margin-bottom: 10px;"><?php echo $error_msg; ?></p>
                     <?php } ?>
 
@@ -131,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </form>
 
                 <div class="login-link">
-                    <p>Already have an account? <a href="../Login/login.php">Log In here</a></p>
+                    <p>Already have an account? <a href="../Views/login.php">Log In here</a></p>
                 </div>
             </div>
         </div>
