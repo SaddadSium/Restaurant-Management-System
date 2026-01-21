@@ -16,20 +16,32 @@ $result = mysqli_query($conn, $sql);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Order Manager</title>
-    <link rel="stylesheet" href="../../Menu/menu.css">
+    <title>Order Manager | S & S Heritage</title>
+    <link rel="stylesheet" href="../../home.css">
     <link rel="stylesheet" href="../dashboard.css">
 </head>
 <body>
+    
+     <div id="logo">
+        <img src="../../logo.png" alt="logo">
+    </div>
+
+    <div class="" id="navbar">
+            <ul>
+                <li><a href="dashboard.php">Dash Board</a></li>
+                <li><a href="order_manager.php">Manage Order's</a></li><li>
+                <li><a href="salesreport.php">Sale's Report</a></li>
+                <li><a href="manage_menu.php">Update Menu</a></li>
+                <li><a href="adduser.php">Add User</a></li>
+                <li><a href="../logout.php">Logout</a></li>
+                
+            </ul>
+
+    </div> 
+
     <div class="dashboard-container">
         <h1>Admin Order Manager</h1>
         
-        <div class="nav-links">
-            <a href="dashboard.php">Dashboard</a>
-            <a href="order_manager.php" style="border-bottom: 2px solid #D4AF37;">Orders</a>
-            <a href="accounts.php">Accounts</a>
-            <a href="../../Views/logout.php" class="logout-btn">Logout</a>
-        </div>
         <table class="data-table">
             <thead>
                 <tr>

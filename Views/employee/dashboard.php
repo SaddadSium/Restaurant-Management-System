@@ -1,8 +1,9 @@
+<!--updated by sium-->
 <?php
 session_start();
 include '../../Controller/db_connect.php';
 
-// স্ট্যাটাস আপডেট
+
 if (isset($_POST['update_status'])) {
     $order_id = $_POST['order_id'];
     $status = $_POST['status'];
@@ -10,23 +11,41 @@ if (isset($_POST['update_status'])) {
     mysqli_query($conn, $sql);
 }
 
-// অর্ডার লোড করা
+
 $sql = "SELECT * FROM orders ORDER BY order_date DESC";
 $result = mysqli_query($conn, $sql);
 ?>
+<!--updated by sium-->
 
+<!--updated by sani-->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Employee Dashboard</title>
-    <link rel="stylesheet" href="../../Menu/menu.css"> <link rel="stylesheet" href="../dashboard.css">    </head>
+    <link rel="stylesheet" href="../../home.css">
+    <link rel="stylesheet" href="../dashboard.css">    
+</head>
 <body>
-    <div class="dashboard-container">
-        <h1>Kitchen / Employee Dashboard</h1>
-        <div style="text-align: right; margin-bottom: 20px;">
-            <a href="../../Login/logout.php" class="logout-btn">Logout</a>
+         <div id="logo">
+              <img src="../../logo.png" alt="logo">
+         </div>
+
+         <div class="" id="navbar">
+            <ul>
+                <li><a href="dashboard.php">Dash Board</a></li>
+                <li><a href="../logout.php">Logout</a></li>
+            </ul>
+           </div><br><br>
+
+
+        <div class="welcome-section">
+        <h2>Employee Dashboard</h2>
         </div>
         
+     
+<!--updated by sani-->
+
+<!--updated by sium-->   
         <table class="data-table">
             <thead>
                 <tr>
@@ -62,5 +81,6 @@ $result = mysqli_query($conn, $sql);
             </tbody>
         </table>
     </div>
+    <!--updated by sium--> 
 </body>
 </html>

@@ -9,7 +9,7 @@ $category = isset($_GET['category']) ? $_GET['category'] : 'Meal';
 if (isset($_POST['add_to_cart'])) {
     if (!isset($_SESSION['user_id'])) {
         $_SESSION['redirect_url'] = "../Menu/menu.php?category=$category"; 
-        header("Location: ../Login/login.php");
+        header("Location: ../Views/login.php");
         exit();
     }
 
@@ -80,11 +80,22 @@ $result = mysqli_query($conn, $sql);
 <!--upadeted end  by sani-->
 
 
+
     <div class="cart-notification">
-        <a href="../cart.php"> <!--updated by sani-->
-            🛒 Cart: <?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>
-        </a>
-    </div>
+    <a href="../cart.php" onclick="return checkCart(<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>)"> 
+        🛒 Cart: <?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>
+    </a>
+</div>
+
+     <script>
+        function checkCart(count) {
+         if (count === 0) {
+         alert("Your cart is empty! Please add some items from the menu first.");
+         return false; 
+     }
+         return true; 
+     }
+    </script>
 
     <div class="menu-container">
         <h1>Our Delicious Menu</h1>

@@ -1,14 +1,15 @@
 <?php
 session_start();
+
+date_default_timezone_set('Asia/Dhaka');
+
 include 'Controller/db_connect.php';
 
-// লগইন চেক
 if (!isset($_SESSION['user_id'])) {
     header("Location: Login/login.php");
     exit();
 }
 
-// অর্ডার প্লেস করার লজিক
 if (isset($_POST['place_order'])) {
     if (!empty($_SESSION['cart'])) {
         $user_id = $_SESSION['user_id'];
@@ -22,14 +23,14 @@ if (isset($_POST['place_order'])) {
         
         $food_name_str = implode(", ", $food_items);
         $order_status = "Pending";
-        $order_date = date('Y-m-d H:i:s'); // বর্তমান সময়
+        $order_date = date('Y-m-d H:i:s'); 
 
         $sql = "INSERT INTO orders (user_id, food_name, total_price, order_status, order_date) VALUES (?, ?, ?, ?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("issss", $user_id, $food_name_str, $total_price, $order_status, $order_date);
         
         if ($stmt->execute()) {
-            unset($_SESSION['cart']); // অর্ডার শেষে কার্ট খালি
+            unset($_SESSION['cart']);
             echo "<script>alert('Order Placed Successfully!'); window.location.href='Menu/menu.php';</script>";
         } else {
             echo "<script>alert('Failed to place order.');</script>";
@@ -37,7 +38,6 @@ if (isset($_POST['place_order'])) {
     }
 }
 
-// রিমুভ আইটেম
 if (isset($_GET['remove'])) {
     $id = $_GET['remove'];
     unset($_SESSION['cart'][$id]);
@@ -50,11 +50,15 @@ if (isset($_GET['remove'])) {
 <html>
 <head>
     <title>My Cart</title>
-    <link rel="stylesheet" href="Menu/menu.css"> 
+    <link rel="stylesheet" href="home.css"> 
     <link rel="stylesheet" href="cart.css">      
 </head>
 <body>
-    
+
+      <div id="logo">
+              <img src="logo.png" alt="logo">
+         </div>
+
     <div id="navbar">
         <ul>
              <li><a href="index.php">Home</a></li>
@@ -64,7 +68,6 @@ if (isset($_GET['remove'])) {
 
              <?php 
                  if (isset($_SESSION['user_id'])) {
-
                  echo '<li><a href="Views/customer/dashboard.php">Dashboard</a></li>';
                  echo '<li><a href="Views/logout.php">Log Out</a></li>';
                     } 
