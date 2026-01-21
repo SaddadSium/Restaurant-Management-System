@@ -50,7 +50,9 @@ if (isset($_GET['remove'])) {
 <html>
 <head>
     <title>My Cart</title>
-    <link rel="stylesheet" href="Menu/menu.css"> <link rel="stylesheet" href="cart.css">      </head>
+    <link rel="stylesheet" href="Menu/menu.css"> 
+    <link rel="stylesheet" href="cart.css">      
+</head>
 <body>
     
     <div id="navbar">

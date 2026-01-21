@@ -70,7 +70,7 @@ $result = mysqli_query($conn, $sql);
     </div>
 
     <div class="cart-notification">
-        <a href="cart.php">
+        <a href="../cart.php"> <!--updated by sani-->
             🛒 Cart: <?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0; ?>
         </a>
     </div>
